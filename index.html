@@ -203,7 +203,7 @@
             <li><a href="https://www.youtube.com/watch?v=DxXhS6EFlno" target="_blank" onclick="activateDoneButton()">Ritual Secreto de CLAUNECK</a></li>
             <li><a href="https://www.youtube.com/watch?v=ADV-TWa1swg" target="_blank" onclick="activateDoneButton()">Pacto con MAMMON</a></li>
         </ul>
-        <br><br><button id="button5" onclick="nextStep(5)" disabled>Hecho</button><br>
+        <br><br><button id="button5" onclick="nextStep(5)">Hecho</button><br>
     </div>
 
     <div class="ad-container" id="ad5">
@@ -295,6 +295,8 @@
             document.getElementById('ad5').style.display = 'block';
         } else if (step === 5) {
             document.getElementById('ad5').style.display = 'none';
+            alert("Ritual completo!");
+            document.getElementById('activation').style.display = 'block';
         }
     }
 </script>
