@@ -19,15 +19,11 @@
             padding: 30px;
             border-radius: 10px;
         }
-        h1 {
-            font-size: 3.5em;
+        h1, h2 {
+            font-family: 'Gothic', serif; /* Fuente gótica */
+            color: #000; /* Color negro */
+            font-size: 2em; /* Tamaño más pequeño */
             margin: 0;
-            color: #FFD700; /* Color dorado */
-        }
-        h2 {
-            font-size: 2.5em;
-            color: #66FF66; /* Verde dólar */
-            margin-top: 10px;
         }
         .altar {
             background-color: #333; /* Fondo oscuro del altar */
@@ -52,6 +48,7 @@
             color: #FFD700; /* Texto dorado */
         }
         button {
+            font-family: 'Gothic', serif; /* Fuente gótica */
             background-color: #FFD700; /* Color dorado */
             color: #1c1c1c; /* Texto oscuro */
             border: none;
@@ -88,11 +85,8 @@
             margin-top: 10px;
         }
         @media (max-width: 600px) {
-            h1 {
-                font-size: 2.5em;
-            }
-            h2 {
-                font-size: 1.8em;
+            h1, h2 {
+                font-size: 1.5em;
             }
             .call-to-action {
                 font-size: 1.2em;
@@ -106,8 +100,10 @@
 <body>
 
 <header>
-    <h1>Ritual de Invocación a los demonios del Dinero</h1>
-    <p>Cibermagia y Tecnopaganismo para Vender tu Alma a los Demonios goéticos del dinero y activar los servidores mágicos que te ayudarán a obtenerlo. <p>
+    <img src="candle.gif" alt="Vela" class="candle" style="float: left;">
+    <h1>Ritual de Invocación Cibermágico a los demonios del Dinero</h1>
+    <img src="candle.gif" alt="Vela" class="candle" style="float: right;">
+    <p>Cibermagia y Tecnopaganismo para Vender tu Alma a los Demonios Goéticos del dinero y activar los servidores mágicos que te ayudarán a obtenerlo.</p>
 </header>
 
 <div class="altar">
@@ -116,7 +112,19 @@
     <img src="candle.gif" alt="Vela" class="candle" style="float: right;">
     
     <p>Bienvenido al ritual de invocación al dinero, donde cada paso es crucial para activar el poder de las entidades mágicas. Sigue las instrucciones cuidadosamente.</p>
-    
+
+    <div class="call-to-action" id="step0">
+        <h3>Paso 0: Bloque Publicitario</h3>
+        <p>Es necesario darle click al bloque como ofrenda para los demonios y los servidores, mínimo una vez ya que esto sella la ofrenda necesaria para el pacto.</p>
+        <div class="ad-container" id="ad0">
+            <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
+            <iframe data-aa='2293131'
+                    src='//ad.a-ads.com/2293131?size=300x250'
+                    style='width:300px; height:250px;'></iframe>
+            <img src="candle.gif" alt="Vela derecha del bloque publicitario" class="candle" style="float: right;">
+        </div>
+    </div>
+
     <div class="call-to-action" id="step1">
         <h3>Paso 1: Suscríbete a nuestro canal de YouTube</h3>
         <p>Aurum veni, aurum auctum, largitas affer</p>
@@ -229,7 +237,9 @@
     });
 
     function nextStep(step) {
-        if (step === 1) {
+        if (step === 0) {
+            document.getElementById('ad0').style.display = 'block';
+        } else if (step === 1) {
             document.getElementById('ad1').style.display = 'none';
             document.getElementById('step2').style.display = 'block';
             document.getElementById('ad2').style.display = 'block';
