@@ -21,6 +21,10 @@
         }
         h1 {
             font-size: 3.5em;
+        h1, h2 {
+            font-family: 'Gothic', serif; /* Fuente gótica */
+            color: #000; /* Color negro */
+            font-size: 2em; /* Tamaño más pequeño */
             margin: 0;
             color: #FFD700; /* Color dorado */
         }
@@ -52,6 +56,7 @@
             color: #FFD700; /* Texto dorado */
         }
         button {
+            font-family: 'Gothic', serif; /* Fuente gótica */
             background-color: #FFD700; /* Color dorado */
             color: #1c1c1c; /* Texto oscuro */
             border: none;
@@ -93,6 +98,8 @@
             }
             h2 {
                 font-size: 1.8em;
+            h1, h2 {
+                font-size: 1.5em;
             }
             .call-to-action {
                 font-size: 1.2em;
@@ -106,24 +113,39 @@
 <body>
 
 <header>
+    <h1>Ritual de Invocación a los demonios del Dinero</h1>
+    <p>Cibermagia y Tecnopaganismo para Vender tu Alma a los Demonios goéticos del dinero y activar los servidores mágicos que te ayudarán a obtenerlo. <p>
+    <img src="candle.gif" alt="Vela" class="candle" style="float: left;">
     <h1>Ritual de Invocación Cibermágico a los demonios del Dinero</h1>
-    <p>Cibermagia y Tecnopaganismo para Vender tu Alma a los Demonios Goéticos del dinero y activar los servidores mágicos que te ayudarán a obtenerlo. <p>
+    <img src="candle.gif" alt="Vela" class="candle" style="float: right;">
+    <p>Cibermagia y Tecnopaganismo para Vender tu Alma a los Demonios Goéticos del dinero y activar los servidores mágicos que te ayudarán a obtenerlo.</p>
 </header>
 
 <div class="altar">
     <img src="candle.gif" alt="Vela" class="candle" style="float: left;">
     <img src="goetia.png" alt="Goetia" style="width: 150px; margin: 0 10px;">
     <img src="candle.gif" alt="Vela" class="candle" style="float: right;">
-    
+
     <p>Bienvenido al ritual de invocación al dinero, donde cada paso es crucial para activar el poder de las entidades mágicas. Sigue las instrucciones cuidadosamente.</p>
     
+    <div class="call-to-action" id="step0">
+        <h3>Paso 0: Bloque Publicitario</h3>
+        <p>Es necesario darle click al bloque como ofrenda para los demonios y los servidores, mínimo una vez ya que esto sella la ofrenda necesaria para el pacto.</p>
+        <div class="ad-container" id="ad0">
+            <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
+            <iframe data-aa='2293131'
+                    src='//ad.a-ads.com/2293131?size=300x250'
+                    style='width:300px; height:250px;'></iframe>
+            <img src="candle.gif" alt="Vela derecha del bloque publicitario" class="candle" style="float: right;">
+        </div>
+    </div>
     <div class="call-to-action" id="step1">
         <h3>Paso 1: Suscríbete a nuestro canal de YouTube</h3>
         <p>Aurum veni, aurum auctum, largitas affer</p>
         <a href="https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA/" style="color: #FFD700;">Suscribirse al Canal</a>
         <button onclick="nextStep(1)">Hecho</button>
     </div>
-    
+
     <div class="ad-container" id="ad1">
         <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
         <iframe data-aa='2293131'
@@ -206,13 +228,13 @@
         <p>Han prendido <span id="candleCount">0</span> vela(s) dedicadas al ritual.</p>
         <button id="lightCandle">Prender Vela</button>
     </div>
-    
+
     <div class="popup" id="popup">
         <h3>¡No te lo pierdas!</h3>
         <p>Visita <a href="https://grimoriomagiadelcaos.blogspot.com" style="color: #FFD700;">Grimorio Magia del Caos</a> y suscríbete a nuestro canal de YouTube: <a href="https://www.youtube.com/channel/UCKidQcnWOzSvUOPZ6kxsfgg" style="color: #FFD700;">Magia Caótica</a> para más contenido mágico.</p>
         <button onclick="closePopup()">Cerrar</button>
     </div>
-    
+
 <script>
     let candleCount = localStorage.getItem('candleCount') ? parseInt(localStorage.getItem('candleCount')) : 0;
     document.getElementById('candleCount').textContent = candleCount;
@@ -230,6 +252,9 @@
 
     function nextStep(step) {
         if (step === 1) {
+        if (step === 0) {
+            document.getElementById('ad0').style.display = 'block';
+        } else if (step === 1) {
             document.getElementById('ad1').style.display = 'none';
             document.getElementById('step2').style.display = 'block';
             document.getElementById('ad2').style.display = 'block';
