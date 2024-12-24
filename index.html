@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritual de Invocación al Dinero</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <style>
+        body {
+            background-color: #1c1c1c; /* Fondo oscuro */
+            font-family: 'Georgia', serif;
+            color: #fff; /* Texto blanco para contraste */
+            text-align: center;
+        }
+        header {
+            background-color: #C0C0C0; /* Oro viejo */
+            padding: 30px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 3.5em;
+            margin: 0;
+            color: #FFD700; /* Color dorado */
+        }
+        h2 {
+            font-size: 2.5em;
+            color: #66FF66; /* Verde dólar */
+            margin-top: 10px;
+        }
+        .altar {
+            background-color: #333; /* Fondo oscuro del altar */
+            border: 3px solid #FFD700; /* Borde dorado */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            margin: 20px auto;
+            max-width: 800px;
+            position: relative;
+        }
+        .altar img {
+            width: 150px; /* Ajusta el tamaño del sigilo */
+            margin-bottom: 20px;
+        }
+        .call-to-action {
+            background-color: #444; /* Fondo para el llamado a la acción */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #FFD700; /* Texto dorado */
+        }
+        button {
+            background-color: #FFD700; /* Color dorado */
+            color: #1c1c1c; /* Texto oscuro */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #FFC700; /* Efecto hover */
+        }
+        .ad-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+        .popup h3 {
+            color: #FFD700; /* Color dorado */
+        }
+        .popup button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ritual de Invocación al Dinero</h1>
+    <h2>Cibermagia y Tecnopaganismo para Vender tu Alma a los Demonios</h2>
+</header>
+
+<div class="altar">
+    <img src="candle.gif" alt="Vela" class="candle" style="float: left;">
+    
+    <p>Bienvenido al ritual de invocación al dinero, donde cada paso es crucial para activar el poder de las entidades mágicas. Sigue las instrucciones cuidadosamente.</p>
+    
+    <div class="call-to-action">
+        <h3>Paso 1: Suscríbete a nuestro canal de YouTube</h3>
+        <a href="https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA/" style="color: #FFD700;">Suscribirse al Canal</a>
+        <button onclick="nextStep(1)">Hecho</button>
+    </div>
+    
+    <div class="ad-container">
+        <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
+        <iframe data-aa='2293131'
+                src='//ad.a-ads.com/2293131?size=300x250'
+                style='width:300px; height:250px;'></iframe>
+        <img src="candle.gif" alt="Vela derecha del bloque publicitario" class="candle" style="float: right;">
+    </div>
+
+    <div class="call-to-action" id="step2" style="display:none;">
+        <h3>Paso 2: Suscríbete a nuestro blog de Blogspot</h3>
+        <a href="https://grimoriomagiadelcaos.blogspot.com" style="color: #FFD700;">Suscribirse al Blog</a>
+        <button onclick="nextStep(2)">Hecho</button>
+    </div>
+
+    <div class="ad-container">
+        <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
+        <iframe data-aa='2293131'
+                src='//ad.a-ads.com/2293131?size=300x250'
+                style='width:300px; height:250px;'></iframe>
+        <img src="candle.gif" alt="Vela derecha del bloque publicitario" class="candle" style="float: right;">
+    </div>
+
+    <div class="call-to-action" id="step3" style="display:none;">
+        <h3>Paso 3: Únete a nuestro grupo de Telegram</h3>
+        <a href="https://t.me/magiacaoticacoven" style="color: #FFD700;">Unirse al Grupo</a>
+        <button onclick="nextStep(3)">Hecho</button>
+    </div>
+
+    <div class="ad-container">
+        <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
+        <iframe data-aa='2293131'
+                src='//ad.a-ads.com/2293131?size=300x250'
+                style='width:300px; height:250px;'></iframe>
+        <img src="candle.gif" alt="Vela derecha del bloque publicitario" class="candle" style="float: right;">
+    </div>
+
+    <div class="call-to-action" id="step4" style="display:none;">
+        <h3>Paso 4: Suscríbete a nuestro canal de Telegram</h3>
+        <a href="https://t.me/magiacaotica" style="color: #FFD700;">Suscribirse al Canal</a>
+        <button onclick="nextStep(4)">Hecho</button>
+    </div>
+
+    <div class="ad-container">
+        <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
+        <iframe data-aa='2293131'
+                src='//ad.a-ads.com/2293131?size=300x250'
+                style='width:300px; height:250px;'></iframe>
+        <img src="candle.gif" alt="Vela derecha del bloque publicitario" class="candle" style="float: right;">
+    </div>
+
+    <div class="call-to-action" id="step5" style="display:none;">
+        <h3>Paso 5: Ver los siguientes videos y comentar</h3>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=S6mh-gWEyXQ" style="color: #FFD700;">Invocación a JUPITURIO ENTRAVERBA</a></li>
+            <li><a href="https://www.youtube.com/watch?v=l6In9ov4D2M" style="color: #FFD700;">Invocación a JERDEHL</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Iz__UuJ22HM" style="color: #FFD700;">Invocación a LUX</a></li>
+            <li><a href="https://www.youtube.com/watch?v=UL1ZjNrSTzc" style="color: #FFD700;">Invocación al TECELÓN DEL DINERO</a></li>
+            <li><a href="https://www.youtube.com/watch?v=1dZ_i81o0_o" style="color: #FFD700;">Invocación a TEVYAH</a></li>
+            <li><a href="https://www.youtube.com/watch?v=n0IkLLI9Ktg" style="color: #FFD700;">Invocación a DOMINIVINCE</a></li>
+            <li><a href="https://www.youtube.com/watch?v=DxXhS6EFlno" style="color: #FFD700;">Ritual Secreto de CLAUNECK</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ADV-TWa1swg" style="color: #FFD700;">Pacto con MAMMON</a></li>
+        </ul>
+        <button onclick="nextStep(5)">Hecho</button>
+    </div>
+
+    <div class="ad-container">
+        <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
+        <iframe data-aa='2293131'
+                src='//ad.a-ads.com/2293131?size=300x250'
+                style='width:300px; height:250px;'></iframe>
+        <img src="candle.gif" alt="Vela derecha del bloque publicitario" class="candle" style="float: right;">
+    </div>
+
+    <h3>Prender Vela para Activar el Ritual</h3>
+    <p>Han prendido <span id="candleCount">0</span> vela(s) dedicadas al ritual.</p>
+    <button id="lightCandle">Prender Vela</button>
+    <div class="popup" id="popup">
+        <h3>¡No te lo pierdas!</h3>
+        <p>Visita <a href="https://grimoriomagiadelcaos.blogspot.com" style="color: #FFD700;">Grimorio Magia del Caos</a> y suscríbete a nuestro canal de YouTube: <a href="https://www.youtube.com/channel/UCKidQcnWOzSvUOPZ6kxsfgg" style="color: #FFD700;">Magia Caótica</a> para más contenido mágico.</p>
+        <button onclick="closePopup()">Cerrar</button>
+    </div>
+    
+<script>
+    let candleCount = localStorage.getItem('candleCount') ? parseInt(localStorage.getItem('candleCount')) : 0;
+    document.getElementById('candleCount').textContent = candleCount;
+
+    document.getElementById('lightCandle').addEventListener('click', function() {
+        if (candleCount < 1) { // Permitir solo una vela por visita
+            candleCount++;
+            localStorage.setItem('candleCount', candleCount);
+            document.getElementById('candleCount').textContent = candleCount;
+            alert("Has prendido una vela para activar el ritual. Que la abundancia te acompañe el día de hoy.");
+        } else {
+            alert("Ya has prendido la vela en esta visita.");
+        }
+    });
+
+    function nextStep(step) {
+        if (step === 1) {
+            document.getElementById('step2').style.display = 'block';
+        } else if (step === 2) {
+            document.getElementById('step3').style.display = 'block';
+        } else if (step === 3) {
+            document.getElementById('step4').style.display = 'block';
+        } else if (step === 4) {
+            document.getElementById('step5').style.display = 'block';
+        } else if (step === 5) {
+            alert("Todos los pasos han sido completados. ¡El ritual está activado!");
+        }
+    }
+</script>
+</div>
+</body>
+</html>
