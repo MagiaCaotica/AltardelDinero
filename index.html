@@ -101,6 +101,15 @@
                 font-size: 1em;
             }
         }
+        a {
+            color: #FFD700;
+            animation: titilar 1s infinite alternate;
+        }
+        @keyframes titilar {
+            0% { color: #800080; } /* Morado */
+            50% { color: #000000; } /* Negro */
+            100% { color: #66FF66; } /* Verde */
+        }
     </style>
 </head>
 <body>
@@ -120,8 +129,9 @@
     <div class="call-to-action" id="step1">
         <h3>Paso 1: Suscríbete a nuestro canal de YouTube</h3>
         <p>Aurum veni, aurum auctum, largitas affer</p>
-        <a href="https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA/" style="color: #FFD700;" target="_blank">Suscribirse al Canal</a>
-        <br><br><button onclick="nextStep(1)">Hecho</button><br>
+        <a href="https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA/" target="_blank" onclick="completeStep(1)">Suscribirse al Canal</a>
+        <div id="message1" style="display:none; color: #FFD700;">Paso completado!</div>
+        <br><br><button id="button1" onclick="nextStep(1)" disabled>Hecho</button><br>
     </div>
     
     <div class="ad-container" id="ad1">
@@ -135,8 +145,9 @@
     <div class="call-to-action" id="step2" style="display:none;">
         <h3>Paso 2: Suscríbete a nuestro blog de Blogspot</h3>
         <p>Diabolus divitiarum, imperium mihi concede</p>
-        <a href="https://grimoriomagiadelcaos.blogspot.com" style="color: #FFD700;" target="_blank">Suscribirse al Blog</a>
-        <br><br><button onclick="nextStep(2)">Hecho</button><br>
+        <a href="https://grimoriomagiadelcaos.blogspot.com" target="_blank" onclick="completeStep(2)">Suscribirse al Blog</a>
+        <div id="message2" style="display:none; color: #FFD700;">Paso completado!</div>
+        <br><br><button id="button2" onclick="nextStep(2)" disabled>Hecho</button><br>
     </div>
 
     <div class="ad-container" id="ad2">
@@ -150,8 +161,9 @@
     <div class="call-to-action" id="step3" style="display:none;">
         <h3>Paso 3: Únete a nuestro grupo de Telegram</h3>
         <p>Opes, abundantia, fluxus monetarius</p>
-        <a href="https://t.me/magiacaoticacoven" style="color: #FFD700;" target="_blank">Unirse al Grupo</a>
-        <br><br><button onclick="nextStep(3)">Hecho</button><br>
+        <a href="https://t.me/magiacaoticacoven" target="_blank" onclick="completeStep(3)">Unirse al Grupo</a>
+        <div id="message3" style="display:none; color: #FFD700;">Paso completado!</div>
+        <br><br><button id="button3" onclick="nextStep(3)" disabled>Hecho</button><br>
     </div>
 
     <div class="ad-container" id="ad3">
@@ -165,8 +177,9 @@
     <div class="call-to-action" id="step4" style="display:none;">
         <h3>Paso 4: Suscríbete a nuestro canal de Telegram</h3>
         <p>Abundantiam pecuniarum a tenebris evoca</p>
-        <a href="https://t.me/magiacaotica" style="color: #FFD700;" target="_blank">Suscribirse al Canal</a>
-        <br><br><button onclick="nextStep(4)">Hecho</button><br>
+        <a href="https://t.me/magiacaotica" target="_blank" onclick="completeStep(4)">Suscribirse al Canal</a>
+        <div id="message4" style="display:none; color: #FFD700;">Paso completado!</div>
+        <br><br><button id="button4" onclick="nextStep(4)" disabled>Hecho</button><br>
     </div>
 
     <div class="ad-container" id="ad4">
@@ -181,16 +194,16 @@
         <h3>Paso 5: Ver los siguientes videos y comentar</h3>
         <p>Demonium divitiarum, prosperitatem mihi adfer</p>
         <ul>
-            <li><a href="https://www.youtube.com/watch?v=S6mh-gWEyXQ" style="color: #FFD700;" target="_blank">Invocación a JUPITURIO ENTRAVERBA</a></li>
-            <li><a href="https://www.youtube.com/watch?v=l6In9ov4D2M" style="color: #FFD700;" target="_blank">Invocación a JERDEHL</a></li>
-            <li><a href="https://www.youtube.com/watch?v=Iz__UuJ22HM" style="color: #FFD700;" target="_blank">Invocación a LUX</a></li>
-            <li><a href="https://www.youtube.com/watch?v=UL1ZjNrSTzc" style="color: #FFD700;" target="_blank">Invocación al TECELÓN DEL DINERO</a></li>
-            <li><a href="https://www.youtube.com/watch?v=1dZ_i81o0_o" style="color: #FFD700;" target="_blank">Invocación a TEVYAH</a></li>
-            <li><a href="https://www.youtube.com/watch?v=n0IkLLI9Ktg" style="color: #FFD700;" target="_blank">Invocación a DOMINIVINCE</a></li>
-            <li><a href="https://www.youtube.com/watch?v=DxXhS6EFlno" style="color: #FFD700;" target="_blank">Ritual Secreto de CLAUNECK</a></li>
-            <li><a href="https://www.youtube.com/watch?v=ADV-TWa1swg" style="color: #FFD700;" target="_blank">Pacto con MAMMON</a></li>
+            <li><a href="https://www.youtube.com/watch?v=S6mh-gWEyXQ" target="_blank" onclick="completeStep(5)">Invocación a JUPITURIO ENTRAVERBA</a></li>
+            <li><a href="https://www.youtube.com/watch?v=l6In9ov4D2M" target="_blank" onclick="completeStep(5)">Invocación a JERDEHL</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Iz__UuJ22HM" target="_blank" onclick="completeStep(5)">Invocación a LUX</a></li>
+            <li><a href="https://www.youtube.com/watch?v=UL1ZjNrSTzc" target="_blank" onclick="completeStep(5)">Invocación al TECELÓN DEL DINERO</a></li>
+            <li><a href="https://www.youtube.com/watch?v=1dZ_i81o0_o" target="_blank" onclick="completeStep(5)">Invocación a TEVYAH</a></li>
+            <li><a href="https://www.youtube.com/watch?v=n0IkLLI9Ktg" target="_blank" onclick="completeStep(5)">Invocación a DOMINIVINCE</a></li>
+            <li><a href="https://www.youtube.com/watch?v=DxXhS6EFlno" target="_blank" onclick="completeStep(5)">Ritual Secreto de CLAUNECK</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ADV-TWa1swg" target="_blank" onclick="completeStep(5)">Pacto con MAMMON</a></li>
         </ul>
-        <br><br><button onclick="nextStep(5)">Hecho</button><br>
+        <br><br><button id="button5" onclick="nextStep(5)" disabled>Hecho</button><br>
     </div>
 
     <div class="ad-container" id="ad5">
@@ -229,6 +242,22 @@
         }
     });
 
+    let stepsCompleted = 0;
+
+    function completeStep(step) {
+        document.getElementById('message' + step).style.display = 'block';
+        document.getElementById('button' + step).disabled = false;
+        stepsCompleted++;
+        checkAllStepsCompleted();
+    }
+
+    function checkAllStepsCompleted() {
+        if (stepsCompleted === 5) {
+            alert("Todos los pasos han sido completados. ¡El ritual está activado!");
+            document.getElementById('activation').style.display = 'block';
+        }
+    }
+
     function nextStep(step) {
         if (step === 1) {
             document.getElementById('ad1').style.display = 'none';
@@ -248,8 +277,6 @@
             document.getElementById('ad5').style.display = 'block';
         } else if (step === 5) {
             document.getElementById('ad5').style.display = 'none';
-            alert("Todos los pasos han sido completados. ¡El ritual está activado!");
-            document.getElementById('activation').style.display = 'block';
         }
     }
 </script>
