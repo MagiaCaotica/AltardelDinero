@@ -65,7 +65,7 @@
             background-color: #FFC700; /* Efecto hover */
         }
         .ad-container {
-            display: flex;
+            display: none; /* Ocultar por defecto */
             justify-content: center;
             margin: 20px 0;
         }
@@ -117,7 +117,7 @@
     
     <p>Bienvenido al ritual de invocación al dinero, donde cada paso es crucial para activar el poder de las entidades mágicas. Sigue las instrucciones cuidadosamente.</p>
     
-    <div class="call-to-action">
+    <div class="call-to-action" id="step1">
         <h3>Paso 1: Suscríbete a nuestro canal de YouTube</h3>
         <a href="https://www.youtube.com/channel/UCglU9np0SqGcnrCMLyVOqKA/" style="color: #FFD700;">Suscribirse al Canal</a>
         <button onclick="nextStep(1)">Hecho</button>
@@ -137,7 +137,7 @@
         <button onclick="nextStep(2)">Hecho</button>
     </div>
 
-    <div class="ad-container" id="ad2" style="display:none;">
+    <div class="ad-container" id="ad2">
         <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
         <iframe data-aa='2293131'
                 src='//ad.a-ads.com/2293131?size=300x250'
@@ -151,7 +151,7 @@
         <button onclick="nextStep(3)">Hecho</button>
     </div>
 
-    <div class="ad-container" id="ad3" style="display:none;">
+    <div class="ad-container" id="ad3">
         <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
         <iframe data-aa='2293131'
                 src='//ad.a-ads.com/2293131?size=300x250'
@@ -165,7 +165,7 @@
         <button onclick="nextStep(4)">Hecho</button>
     </div>
 
-    <div class="ad-container" id="ad4" style="display:none;">
+    <div class="ad-container" id="ad4">
         <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
         <iframe data-aa='2293131'
                 src='//ad.a-ads.com/2293131?size=300x250'
@@ -188,7 +188,7 @@
         <button onclick="nextStep(5)">Hecho</button>
     </div>
 
-    <div class="ad-container" id="ad5" style="display:none;">
+    <div class="ad-container" id="ad5">
         <img src="candle.gif" alt="Vela izquierda del bloque publicitario" class="candle" style="float: left;">
         <iframe data-aa='2293131'
                 src='//ad.a-ads.com/2293131?size=300x250'
